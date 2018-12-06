@@ -1,7 +1,7 @@
 # What is this?
 * Docker container
 * Phantombot
-* Ubuntu 18.04
+* Alpine Linux 
 * Includes beta-panel
 
 # Functionality
