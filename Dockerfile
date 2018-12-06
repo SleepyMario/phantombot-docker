@@ -1,17 +1,12 @@
 # Base docker image
-FROM ubuntu:18.04
+FROM openjdk:8-jre-alpine 
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 # environment variables
 ARG PV=2.4.2
 
 # Install Dependencies
-RUN apt-get update && apt-get upgrade -y 
-RUN apt-get install -y \
-	curl \
-	wget \
-	unzip \
-	openjdk-8-jdk
+RUN apk add --no-cache bash curl wget unzip  
 
 # phantombot installation 
 RUN mkdir -p /root/tmp && \
@@ -28,13 +23,7 @@ RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output beta-panel
 
 # remove leftovers
 RUN cd && \
-	rm -rf /root/tmp && \
-	apt-get remove wget curl unzip -y && \
-	apt-get autoremove -y && \
-	apt-get autoclean -y && \
-	apt-get clean -y
+	rm -rf /root/tmp 
 
 # run phantombot
 CMD cd phantombot && ./launch.sh
-	
-	
