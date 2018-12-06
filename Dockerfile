@@ -25,5 +25,8 @@ RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output beta-panel
 RUN cd && \
 	rm -rf /root/tmp 
 
+# Open ports
+EXPOSE 25000-25004
+
 # run phantombot
 CMD cd phantombot && ./launch.sh
