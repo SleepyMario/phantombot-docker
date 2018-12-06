@@ -8,7 +8,11 @@
 * 100%. 
 
 # How to run
-You will need to manually mount the config files. Make sure you have a  botlogin.txt that suits your needs  in your configuration.
+Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. Make sure that the botlogin.txt that suits your needs.
 ```sh
-docker run -it -v /home/phantombot/phantombot-docker/config:/phantombot/config -v /etc/localtime:/etc/localtime:ro --net=host phantombot-ubuntu:latest
+docker run -it \ 
+	-v /PATH/TO/CONFIG/config:/phantombot/config \
+	-v /etc/localtime:/etc/localtime:ro \
+	--net=host \
+	sleepiestmario/phantombot
 ```
