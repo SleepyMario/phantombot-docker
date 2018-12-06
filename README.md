@@ -17,8 +17,8 @@ docker run -it \
 	sleepiestmario/phantombot
 ```
 
-# botlogin.txt example
-A botlogin.txt template for use on twitch with https enabled, mariadb/mysql and youtube.
+### botlogin.txt 
+A template for use on twitch with https, mariadb/mysql and youtube enabled.
 
 ```sh
 apioauth=<TWITCH APIOAUTH>
