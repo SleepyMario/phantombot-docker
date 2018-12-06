@@ -16,3 +16,35 @@ docker run -it \
 	--net=host \
 	sleepiestmario/phantombot
 ```
+
+# botlogin.txt example
+A botlogin.txt template for use on twitch with https enabled, mariadb/mysql and youtube.
+
+```sh
+apioauth=<TWITCH APIOAUTH>
+baseport=25000
+betap=true
+channel=<CHANNEL NAME>
+datastore=mysqlstore
+httpsFileName=/PATH/TO/keystore.jks
+httpsPassword=<KEYSTORE PASSWORD>
+msglimit30=19.0
+musicenable=true
+mysqlhost=127.0.0.1
+mysqlname=<MYSQL DB>
+mysqlpass=<MYSQL PWD>
+mysqluser=<MYSQL USER>
+oauth=<OAUTH TOKEN>
+owner=<OWNER>
+panelpassword=<PANEL PWD>
+paneluser=<PANEL USER>
+usehttps=true
+user=<TWITCH USER>
+webauth=<TWITCH WEBAUTH>
+webauthro=<TWITCH WEBAUTHRO>
+webenable=true
+whisperlimit60=60.0
+youtubekey=<YOUTUBE KEY>
+ytauth=<YOUTUBE AUTH>
+ytauthro=<YOUTUBE AUTHRO>
+```
