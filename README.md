@@ -9,7 +9,7 @@
 * 100% (let me know if you run into problems)
 
 # Still-to-do
-* Automatic backup every 24 hours.
+* Automatic backup every 24 hours --- CURRENTLY TESTING
 * Implementing a different way of changing botlogin.txt other than manually editing it. 
 
 # How to run
@@ -17,6 +17,7 @@ Edit the command below according to your needs. You will need to mount the confi
 ```sh
 docker run -it \ 
 	-v /PATH/TO/CONFIG/config:/phantombot/config \
+	-v /PATH/TO/BACKUP/DIR:/backup \
 	-v /etc/localtime:/etc/localtime:ro \
 	--net=host \
 	sleepiestmario/phantombot
