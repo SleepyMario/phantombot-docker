@@ -35,9 +35,6 @@ RUN chmod a+x /etc/periodic/daily/phantombot
 EXPOSE 25000-25004
 
 # Cron job + wrapper script
-COPY start-crond /start-crond
-COPY start-phantombot /start-phantombot
-COPY wrapper.sh /wrapper.sh
 RUN echo "crond" > /start-crond
 RUN echo "cd phantombot && ./launch.sh" > /start-phantombot
 COPY wrapper.sh /wrapper.sh
