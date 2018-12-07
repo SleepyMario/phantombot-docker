@@ -41,10 +41,10 @@ paneluser=<PANEL USER>
 usehttps=true
 user=<TWITCH USER>
 webauth=<TWITCH WEBAUTH>
-webauthro=<TWITCH WEBAUTHRO>
+webauthro=<DO NOT ENTER>
 webenable=true
 whisperlimit60=60.0
 youtubekey=<YOUTUBE KEY>
 ytauth=<YOUTUBE AUTH>
-ytauthro=<YOUTUBE AUTHRO>
+ytauthro=<NO NOT ENTER>
 ```
