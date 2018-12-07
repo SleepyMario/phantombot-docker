@@ -3,7 +3,7 @@
 * Phantombot
 * Alpine Linux 
 * Includes beta-panel
-* Settings are saved upon exit
+* Settings are saved
 
 # Functionality
 * 100% (let me know if you run into problems)
@@ -13,7 +13,7 @@
 * Implementing a different way of changing botlogin.txt other than manually editing it. 
 
 # How to run
-Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. Make sure that the botlogin.txt that suits your needs.
+Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. Make sure you have a correct botlogin.txt file.
 ```sh
 docker run -it \ 
 	-v /PATH/TO/CONFIG/config:/phantombot/config \
