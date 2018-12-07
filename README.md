@@ -25,7 +25,7 @@ docker run -it \
 # All botlogin.txt arguments
 Various args for use on twitch and with any of the following optionally enabled: HTTPS, Mariadb/MySQL, Streamlabs, Gamewisp, Discord, Twitter and Youtube.
 
-For more information on the arguments below, please click [here](https://community.phantombot.tv/t/settings-for-botlogin-txt/78) 
+For more information on the arguments below, please click [here](https://community.phantombot.tv/t/settings-for-botlogin-txt/78) .
 Booleans are set with *true* or *false*.
 
 ### BASIC CONFIGURATION
@@ -46,7 +46,7 @@ Booleans are set with *true* or *false*.
         web_enable=		# Boolean, to enable/disable the web server.
         whisperlimit60=		# Number of whispers allowed in 60 seconds. Not used at present. 
 ```
-### HTTPS (more info [here](https://community.phantombot.tv/t/how-to-enable-ssl-on-phantombot/71)
+### HTTPS---how-to [here](https://community.phantombot.tv/t/how-to-enable-ssl-on-phantombot/71)
 ```sh
         usehttps=		# Boolean, requires httpsFilename and httpsPassword to be set. 
         httpsFileName=		# /PATH/TO/keystore.jks
@@ -57,7 +57,7 @@ Booleans are set with *true* or *false*.
         datastore=		# Choose between mysqlstore (for Mariadb/Mysql) and inistore (text-based on disk system). SqlLite3 is used by default.
         datastoreconfig=	# /PATH/TO/FILE For inistore and QQLite3. Configures the different data store types. 
 ```
-### FOR MARIADB/MYSQL (how-to [here](https://community.phantombot.tv/t/mysql-configuration/73)
+### FOR MARIADB/MYSQL---how-to [here](https://community.phantombot.tv/t/mysql-configuration/73)
 ```sh
         mysqlhost=		# Hostname of the host.
         mysqlname=		# Name of the database.
@@ -71,7 +71,7 @@ Booleans are set with *true* or *false*.
         apioauth=		# API OAuth key. <link>
         channel=		# Twitch channel phantombot will log into.
 ```
-### TWITTER CREDENTIALS (how-to (here)[https://community.phantombot.tv/t/twitter-integration-setup/65)]
+### TWITTER CREDENTIALS---how-to [here])https://community.phantombot.tv/t/twitter-integration-setup/65))
 ```sh
         twitterUser=		# Name of your Twitter account.
         twitter_consumer_key=	# Twitter authorization key.
@@ -79,21 +79,21 @@ Booleans are set with *true* or *false*.
         twitter_access_token=	# Twitter authorization key.
         twitter_secret_token=	# Twitter authorization key.
 ```
-### STREAMLABS CREDENTIALS (how-to (here)[https://phantombot.tv/streamlabs/)]
+### STREAMLABS CREDENTIALS---how-to [here](https://phantombot.tv/streamlabs/)
 ```sh
         twitchalertskey=	# Streamlabs (previously TwitchAlerts) authentication key.
         twitchalertslimit=	# Maximum number of donations to query at one time. Low number recommended.
 ```
-### DISCORD_CREDENTIALS (how-to (here)[https://community.phantombot.tv/t/discord-integration-setup/64]
+### DISCORD_CREDENTIALS---how-to [here](https://community.phantombot.tv/t/discord-integration-setup/64)
 ```sh
         discord_token=		# Discord token.
 ```
-### GAMEWISP CREDENTIALS (how-to (here)[https://phantombot.tv/gamewisp/]
+### GAMEWISP CREDENTIALS---how-to [here](https://phantombot.tv/gamewisp/)
 ```sh
         gamewispauth=		# Autorization token <link>
         gamewisprefresh=	# Autorization refresh token <link>
 ```
-# YOUTUBE CREDENTIALS
+### YOUTUBE CREDENTIALS
 ```sh
 	youtubekey=		# Optional key from Youtube to authenticate with their API. Phantombot provides one internally.
 ```
