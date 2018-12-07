@@ -71,7 +71,7 @@ Booleans are set with *true* or *false*.
         apioauth=		# API OAuth key. <link>
         channel=		# Twitch channel phantombot will log into.
 ```
-# TWITTER CREDENTIALS (how-to [here](https://community.phantombot.tv/t/twitter-integration-setup/65))
+### TWITTER CREDENTIALS (how-to (here)[https://community.phantombot.tv/t/twitter-integration-setup/65)]
 ```sh
         twitterUser=		# Name of your Twitter account.
         twitter_consumer_key=	# Twitter authorization key.
@@ -79,16 +79,16 @@ Booleans are set with *true* or *false*.
         twitter_access_token=	# Twitter authorization key.
         twitter_secret_token=	# Twitter authorization key.
 ```
-# STREAMLABS CREDENTIALS (how-to [here](https://phantombot.tv/streamlabs/))
+### STREAMLABS CREDENTIALS (how-to (here)[https://phantombot.tv/streamlabs/)]
 ```sh
         twitchalertskey=	# Streamlabs (previously TwitchAlerts) authentication key.
         twitchalertslimit=	# Maximum number of donations to query at one time. Low number recommended.
 ```
-# DISCORD_CREDENTIALS (how-to [here](https://community.phantombot.tv/t/discord-integration-setup/64)
+### DISCORD_CREDENTIALS (how-to (here)[https://community.phantombot.tv/t/discord-integration-setup/64]
 ```sh
         discord_token=		# Discord token.
 ```
-# GAMEWISP CREDENTIALS (how-to [here] https://phantombot.tv/gamewisp/)
+### GAMEWISP CREDENTIALS (how-to (here)[https://phantombot.tv/gamewisp/]
 ```sh
         gamewispauth=		# Autorization token <link>
         gamewisprefresh=	# Autorization refresh token <link>
