@@ -22,6 +22,7 @@ RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output beta-panel
 	mv beta-panel /phantombot/web/
 
 # remove leftovers
+RUN apk del --no-cache wget unzip 
 RUN cd && \
 	rm -rf /root/tmp 
 
@@ -37,9 +38,12 @@ EXPOSE 25000-25004
 COPY start-crond /start-crond
 COPY start-phantombot /start-phantombot
 COPY wrapper.sh /wrapper.sh
+RUN echo "crond" > /start-crond
+RUN echo "cd phantombot && ./launch.sh" > /start-phantombot
+COPY wrapper.sh /wrapper.sh
 RUN chmod a+x /start-crond
 RUN chmod a+x /start-phantombot
 RUN chmod a+x /wrapper.sh
 
-# run phantombot
+# Run  
 CMD ./wrapper.sh 
