@@ -71,7 +71,7 @@ Booleans are set with *true* or *false*.
         apioauth=		# API OAuth key. <link>
         channel=		# Twitch channel phantombot will log into.
 ```
-### TWITTER CREDENTIALS---how-to [here])https://community.phantombot.tv/t/twitter-integration-setup/65))
+### TWITTER CREDENTIALS---how-to [here](https://community.phantombot.tv/t/twitter-integration-setup/65)
 ```sh
         twitterUser=		# Name of your Twitter account.
         twitter_consumer_key=	# Twitter authorization key.
