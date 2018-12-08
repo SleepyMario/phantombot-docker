@@ -55,11 +55,11 @@ Booleans are set with *true* or *false*.
 * datastore=<mysqlstore/inistore (text-based on-disk system). Default=SqlLite3>
 * datastoreconfig=</PATH/TO/FILE for inistore and SQLite3. Configures different data store types> 
 ### FOR MARIADB/MYSQL---how-to [here](https://community.phantombot.tv/t/mysql-configuration/73)
-* mysqlhost=<HOSTNAME OF HOST>
-* mysqlname=<Name of the database>
-* mysqlpass=<Password of the user>
+* mysqlhost=<Hostname of host>
+* mysqlname=<Name of database>
+* mysqlpass=<Password of user>
 * mysqlport=<Set if Mariadb/MySQL runs on alternative port>
-* mysqluser=<Name of the user>
+* mysqluser=<Name of user>
 ### TWITCH CREDENTIALS
 * oauth=<Twitch IRC chat OAuth token. Get it [here](https://twitchapps.com/tmi/) >
 * apioauth=<API OAuth key. Get it [here](https://twitchapps.com/tokengen/) >
