@@ -4,10 +4,10 @@
 * Alpine Linux 
 * Includes beta-panel
 * Settings are saved
+* Automatic backup every 24 hours
 
 # Functionality
 * 100%
-* Automatic backup every 24 hours
 
 # Still-to-do
 * Implementing a different way of changing botlogin.txt other than manually editing it. 
@@ -55,7 +55,7 @@ Booleans are set with *true* or *false*.
 * datastore=<mysqlstore/inistore (text-based on-disk system). Default=SqlLite3>
 * datastoreconfig=</PATH/TO/FILE for inistore and SQLite3. Configures different data store types> 
 ### FOR MARIADB/MYSQL---how-to [here](https://community.phantombot.tv/t/mysql-configuration/73)
-* mysqlhost=<Hostname of the host>
+* mysqlhost=<HOSTNAME OF HOST>
 * mysqlname=<Name of the database>
 * mysqlpass=<Password of the user>
 * mysqlport=<Set if Mariadb/MySQL runs on alternative port>
