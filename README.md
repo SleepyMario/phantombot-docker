@@ -15,10 +15,12 @@
 --> Please let me know if anything fails to work!
 
 # How to run
-Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. Make sure you have a correct botlogin.txt file.
+Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. The keystore.jks file is optional (only add it when using https). 
 ```sh
 docker run -it \ 
-	-v /PATH/TO/CONFIG/:/phantombot/config \
+	-v /PATH/TO/botlogin.txt:/phantombot/config/botlogin.txt \
+        -v /PATH/TO/phantombot.db:/phantombot/config/phantombot.db \
+        -v /PATH/TO/keystore.jks:/phantombot/config/keystore.jks \
 	-v /PATH/TO/BACKUP/:/backup \
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 25000:25000 -p 25001:25001 -p 25002:25002 -p 25003:25003 -p 25004:25004 \
