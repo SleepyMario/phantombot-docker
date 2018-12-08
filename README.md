@@ -6,18 +6,20 @@
 * Settings are saved
 
 # Functionality
-* 100% (let me know if you run into problems)
+* 100%
+* Automatic backup every 24 hours
 
 # Still-to-do
-* Automatic backup every 24 hours --- CURRENTLY TESTING
 * Implementing a different way of changing botlogin.txt other than manually editing it. 
+
+--> Please let me know if anything fails to work!
 
 # How to run
 Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. Make sure you have a correct botlogin.txt file.
 ```sh
 docker run -it \ 
-	-v /PATH/TO/CONFIG/config:/phantombot/config \
-	-v /PATH/TO/BACKUP/DIR:/backup \
+	-v /PATH/TO/CONFIG/:/phantombot/config \
+	-v /PATH/TO/BACKUP/:/backup \
 	-v /etc/localtime:/etc/localtime:ro \
 	--net=host \
 	sleepiestmario/phantombot
