@@ -29,7 +29,7 @@ RUN cd && \
 # backup
 RUN mkdir -p /backup/log
 RUN echo "#!/bin/sh" > /etc/periodic/daily/phantombot
-RUN echo "umask 0007;/bin/tar --exclude 'phantombot/web' --exclude 'phantombot/lib' -cjf /backup/$(/bin/date +\%Y-\%m-\%d-\%H_\%M_\%S_\%3N).tar.bz2 /phantombot/ >> /backup/log/backup_phantombot.log 2>&1" > /etc/periodic/daily/phantombot
+RUN echo "umask 0007;/bin/tar --exclude 'phantombot/web' --exclude 'phantombot/lib' -cjf /backup/$(/bin/date +\%Y-\%m-\%d-\%H_\%M_\%S_\%3N).tar.bz2 /phantombot/ >> /backup/log/backup_phantombot.log 2>&1" >> /etc/periodic/daily/phantombot
 RUN chmod a+x /etc/periodic/daily/phantombot
 
 # Cron job + wrapper script
@@ -39,6 +39,9 @@ COPY wrapper.sh /wrapper.sh
 RUN chmod a+x /start-crond
 RUN chmod a+x /start-phantombot
 RUN chmod a+x /wrapper.sh
+
+# Open ports
+EXPOSE 25000 25001 25002 25003 25004 25005
 
 # Run  
 CMD ./wrapper.sh
