@@ -23,7 +23,7 @@ docker run -it \
 	-v /PATH/TO/keystore.jks:/phantombot/config/keystore.jks \
 	-v /PATH/TO/BACKUP/:/backup \
 	-v /etc/localtime:/etc/localtime:ro \
-	-p 25000:25000 -p 25001:25001 -p 25002:25002 -p 25003:25003 -p 25004:25004 \
+	--net=host \
 	sleepiestmario/phantombot
 ```
 
