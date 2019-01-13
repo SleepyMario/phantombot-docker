@@ -5,6 +5,8 @@
 * Includes beta-panel
 * Settings are saved upon restart
 * Automatic backup every 24 hours (defaults at 2:37 AM)
+* Includes both stable & nightly builds 
+* All images are renewed every 24h 
 
 # Functionality
 * 100%
@@ -12,7 +14,7 @@
 --> Please let me know if anything fails to work!
 
 # How to run
-Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. The keystore.jks file is optional (only add it when using https). 
+Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. The keystore.jks file is optional (only add it when using https). Finally open ports 25000-25004.
 ```sh
 docker run -it \ 
 	-v /PATH/TO/botlogin.txt:/phantombot/config/botlogin.txt \
