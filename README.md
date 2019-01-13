@@ -3,14 +3,11 @@
 * Phantombot
 * Alpine Linux 
 * Includes beta-panel
-* Settings are saved
-* Automatic backup every 24 hours
+* Settings are saved upon restart
+* Automatic backup every 24 hours (defaults at 2:37 AM)
 
 # Functionality
 * 100%
-
-# Still-to-do
-* Implementing a different way of changing botlogin.txt other than manually editing it. 
 
 --> Please let me know if anything fails to work!
 
