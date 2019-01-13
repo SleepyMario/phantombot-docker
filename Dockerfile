@@ -17,9 +17,9 @@ RUN mkdir -p /root/tmp && \
 	chmod u+x /phantombot/launch-service.sh /phantombot/launch.sh
 
 # beta panel installation
-RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output beta-panel.zip && \
-	unzip beta-panel.zip && \
-	mv beta-panel /phantombot/web/
+RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output /root/tmp/beta-panel.zip && \
+	unzip /root/tmp/beta-panel.zip && \
+	mv /beta-panel /phantombot/web/
 
 # remove leftovers
 RUN apk del --no-cache wget unzip 
@@ -39,9 +39,6 @@ COPY wrapper.sh /wrapper.sh
 RUN chmod a+x /start-crond
 RUN chmod a+x /start-phantombot
 RUN chmod a+x /wrapper.sh
-
-# Open ports
-EXPOSE 25000 25001 25002 25003 25004 25005
 
 # Run  
 CMD ./wrapper.sh
