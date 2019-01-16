@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 # environment variables
-ARG PV=2.4.2
+ARG PV=nightly
 ARG DATE="`/bin/date +\%Y-\%m-\%d-\%H_\%M_\%S_\%3N`"
 
 # Install Dependencies
@@ -12,9 +12,10 @@ RUN apk add --no-cache bash curl wget unzip
 # phantombot installation 
 RUN mkdir -p /root/tmp && \
  	cd /root/tmp && \
-	wget https://github.com/PhantomBot/PhantomBot/releases/download/v${PV}/PhantomBot-${PV}.zip && \
+	wget https://github.com/PhantomBot/nightly-build/raw/master/PhantomBot-${PV}.zip && \
  	unzip PhantomBot-${PV}.zip && \
-	mv PhantomBot-${PV} /phantombot && \
+	rm PhantomBot-${PV}.zip && \
+	mv PhantomBot* /phantombot && \
 	chmod u+x /phantombot/launch-service.sh /phantombot/launch.sh
 
 # beta panel installation
