@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 LABEL maintainer "Sleepy Mario <theonesleepymario@gmail.com>"
 
 # environment variables
-ARG PV=nightly
+ARG PV=3.0.0
 ARG DATE="`/bin/date +\%Y-\%m-\%d-\%H_\%M_\%S_\%3N`"
 
 # Install Dependencies
@@ -18,10 +18,10 @@ RUN mkdir -p /root/tmp && \
 	mv PhantomBot* /phantombot && \
 	chmod u+x /phantombot/launch-service.sh /phantombot/launch.sh
 
-# beta panel installation
-RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output /root/tmp/beta-panel.zip && \
-	unzip /root/tmp/beta-panel.zip && \
-	mv /beta-panel /phantombot/web/
+## beta panel installation
+#RUN curl https://cloud.zackery.tv/s/Cjydq5tzkeFFWmy/download --output /root/tmp/beta-panel.zip && \
+#	unzip /root/tmp/beta-panel.zip && \
+#	mv /beta-panel /phantombot/web/
 
 # remove leftovers
 RUN apk del --no-cache wget unzip 
