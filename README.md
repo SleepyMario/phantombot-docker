@@ -2,7 +2,6 @@
 * Docker container
 * Phantombot
 * Alpine Linux 
-* Includes beta-panel
 * Settings are saved upon restart
 * Automatic backup every 24 hours (defaults at 2:37 AM)
 * Includes both stable & nightly builds 
@@ -14,8 +13,11 @@
 --> Please let me know if anything fails to work!
 
 # How to run
-There are three versions available: nightly (for the nightly development builds), stable (for the latest stable version, currently 3.0.0), and 2.4.2 (the latest stable version of the 2.x series). Please never use the 'latest' version, as you might get a different version from what you're expecting!
-Edit the command below according to your needs. You will need to mount the config files so they'll be saved upon exit. The keystore.jks file is optional (only add it when using https). Finally open ports 25000-25004.
+* Decide which branch to use. Currently there are three branches available: nightly (for the nightly development builds), stable (for the latest stable version, currently 3.0.0), and 2.4.2 (the latest stable version of the 2.x series). Please never use the 'latest' version, as you might get a different version from what you're expecting!
+* You will need to mount the config files so your settings and data will be saved upon exit.
+* The keystore.jks file is optional (only add it when using https).
+* Edit the command below according to your needs.
+* Finally open ports 25000-25004 of your firewall.
 ```sh
 docker run -it \ 
 	-v /PATH/TO/botlogin.txt:/phantombot/config/botlogin.txt \
@@ -35,7 +37,6 @@ Booleans are set with *true* or *false*.
 
 ### BASIC CONFIGURATION
 * baseport=*Starting port, normally 25000*
-* betap=*Boolean, enable/disable the beta panel*
 * owner=*Name of the broadcaster*
 * clientid=*Typically blank or not set. Can be obtained from Twitch*
 * devcommands=*To help live debug with users. Enabled by default*
