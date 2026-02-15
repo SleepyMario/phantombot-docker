@@ -30,7 +30,7 @@ RUN chmod a+x /var/spool/cron/crontabs/root
 
 # Cron job + wrapper script
 RUN echo "crond" > /start-crond
-RUN echo "cd phantombot && ./launch.sh" > /start-phantombot
+RUN echo "cd phantombot && ./launch-service.sh" > /start-phantombot
 COPY wrapper.sh /wrapper.sh
 RUN chmod a+x /start-crond
 RUN chmod a+x /start-phantombot
